@@ -29,3 +29,11 @@ mutation RemoveContact($id: String!) {
     }
 }
 `
+export const UPDATE_CONTACT = gql`
+mutation UpdateContact($id: String!, $firstName: String!, $lastName: String!){
+    UpdateContact(id: $id, firstName: $firstName, lastName: $lastName) {
+            id
+            firstName
+            lastName
+    }
+}`
